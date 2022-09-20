@@ -117,7 +117,7 @@ public class Silly implements Comparable<Silly>{
         y.countStatic();
         x.countStatic();
         x.countStatic();
-        int[] expected_values = {0, 0, 1, 2};
+        int[] expected_values = {0, 1, 2, 3};
 
         System.out.println("The countStatic calls will return " + Arrays.toString(expected_values));
     }
@@ -155,7 +155,7 @@ public class Silly implements Comparable<Silly>{
          *                We've started it by checking the type of o for you.
          *                You just need to return true if the names are equal.
          */
-        if (!(o instanceof Silly)){
+        if (!(o instanceof Silly)) {
             return false;
         }
 
@@ -164,10 +164,12 @@ public class Silly implements Comparable<Silly>{
         // Hint: to compare strings, we need to use .equals()
         //       e.g. s1.equals(s2)
 
-        if (other.name.equals(this.name)){
+        if (other.name.equals(this.name)) {
             return true;
         }
+        return false;
     }
+
 
     /**
      * 5. If we want to compare two objects, we have to do two things:
